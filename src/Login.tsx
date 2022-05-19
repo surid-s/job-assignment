@@ -6,9 +6,10 @@ import "./App.scss";
 
 type Props = {};
 
-export default function Login({}: Props) {
+export default function Login({ }: Props) {
   // Routes State
   const navigate = useNavigate();
+
 
   // Local State
   const [formData, setFormData] = useState({
@@ -83,8 +84,10 @@ export default function Login({}: Props) {
               type="password"
               onChange={handleChange}
             />
+
             {validate.confirmPassword ? <p>Passwords do not match</p> : ""}
           </div>
+          {/* form */}
           <div>
             <label>Your Full Name</label>
             <input name="name" type="text" onChange={handleChange} />
